@@ -1,5 +1,5 @@
 
-#Install heroku CLI
+# Install heroku CLI
 
 
 sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
@@ -9,18 +9,18 @@ sudo apt-get install heroku
 
 
 
-#log into heroku
+# Log into heroku
 
 heroku login
 
 
 
-#Select the correct heroku git repository
+# Select the correct heroku git repository
 
 heroku git:remote -a gitclone
 
 
-#Update files to heroku git repository
+# Update files to heroku git repository
 
 git add . 
 git commit -am "uploading notes and CLI foundation"
