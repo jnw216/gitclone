@@ -1,12 +1,12 @@
 import os 
 
 from flask import Flask
-from flask.ext.sqlalchemy import sqlalchemy
+#from flask.ext.sqlalchemy import sqlalchemy
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABSE_URI'] = os.environ['DATABASE_URL']
-db = SQLAlchemy(app)
+#app.config['SQLALCHEMY_DATABSE_URI'] = os.environ['DATABASE_URL']
+#db = SQLAlchemy(app)
 
 
 @app.route('/')
