@@ -11,7 +11,7 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def index():
-    return "GitClone!"
+    return "GitClone! Added DB Boilerplate"
 
 @app.route('/push')
 def push():
