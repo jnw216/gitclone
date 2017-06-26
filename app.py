@@ -11,7 +11,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "GitClone! Added DB Boilerplate"
+    # PRINT ALL COMMITS
+    dburi = os.environ['DATABSE_URL']
+    return "GitClone! Added DB Boilerplate take2 " + dburi
 
 @app.route('/push')
 def push():
