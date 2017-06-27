@@ -9,8 +9,10 @@ def index():
 
 @app.route('/push')
 def push():
+    # write new "string" to database entry
     return "pushing file"
 
 @app.route('/pull')
 def pull():
+    #get latest "string" from database
     return "pulling file"
