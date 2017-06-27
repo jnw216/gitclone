@@ -1,7 +1,7 @@
 import os 
 
 from flask import Flask
-#from flask.ext.sqlalchemy import sqlalchemy
+from flask.ext.sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
@@ -14,7 +14,7 @@ def index():
     # PRINT ALL COMMITS
     #dburi = os.environ['DATABSE_URL']
     #db2 = SQLALCHEMY_DATABSE_URI
-    return "GitClone! Added DB Boilerplate take2 <br>" #+ dburi + "<br>" + db2
+    return "GitClone! Added DB Boilerplate import test <br>" #+ dburi + "<br>" + db2
 
 @app.route('/push')
 def push():
