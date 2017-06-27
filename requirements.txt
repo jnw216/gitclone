@@ -3,7 +3,7 @@ gunicorn==19.3.0
 itsdangerous==0.24
 Jinja2==2.7.3
 Werkzeug==0.10.1
-SQLAlchemy==1.1.11
-Migrate==0.3.8
+Flask-SQLAlchemy==2.1
+Flask-Migrate==0.3.8
 psycopg2==2.7.1
 MarkupSafe==1.0
