@@ -5,8 +5,8 @@ from flask_migrate import Migrate, MigrateCommand
 
 
 app = Flask(__name__)
-dburl = os.environ['DATABASE_URL']
-app.config['SQLALCHEMY_DATABASE_URI'] = dburl
+#dburl = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 #db = SQLAlchemy(app)
 #migrate = Migrate(app,db)
 
@@ -15,7 +15,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = dburl
 @app.route('/')
 def index():
     # PRINT ALL COMMITS  
-    return "GitClone! Work In Progress   <br>" 
+    return "GitClone! Work In Progress app.config  <br>" 
 
 
 
