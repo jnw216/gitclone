@@ -14,7 +14,7 @@ def index():
     # PRINT ALL COMMITS
     #dburi = os.environ['DATABSE_URL']
     #db2 = SQLALCHEMY_DATABSE_URI
-    return "GitClone!         removing SQLAlchemy to import           <br>" #+ dburi + "<br>" + db2
+    return "GitClone!         adding Flask-SQLAlchemy to reqs           <br>" #+ dburi + "<br>" + db2
 
 @app.route('/push')
 def push():
