@@ -27,7 +27,8 @@ def pull():
 
 @app.route('/dbtest')
 def dbtest():
-    return os.environ['DATABASE_url']
+    m = os.environ['DATABASE_url']
+    return m
 
 
 
