@@ -1,4 +1,3 @@
-import os 
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -7,14 +6,19 @@ from flask_migrate import Migrate, MigrateCommand
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABSE_URI'] = os.environ['DATABASE_URL']
 #db = SQLAlchemy(app)
+ #db2 = SQLALCHEMY_DATABSE_URI
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+#db = SQLAlchemy(app)
+#migrate = Migrate(app,db)
+
 
 
 @app.route('/')
 def index():
-    # PRINT ALL COMMITS
-    dburi = os.environ['DATABASE_URL']
-    #db2 = SQLALCHEMY_DATABSE_URI
-    return "GitClone!   Added dburi <br>"  #+ "<br>" + db2
+    # PRINT ALL COMMITS  
+    return "GitClone!    <br>" 
+
+
 
 @app.route('/push')
 def push():
