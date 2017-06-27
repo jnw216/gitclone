@@ -28,7 +28,8 @@ def pull():
 
 @app.route('/dbtest')
 def dbtest():
-    m = os.environ['DATABASE_url']
+    #m = os.environ['DATABASE_url']
+    m = os.path.abspath(os.path.dirname(__file__))
     return m
 
 
