@@ -1,10 +1,11 @@
+import os 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate, MigrateCommand
-import os
+
 
 app = Flask(__name__)
-
+dbase = os.environ['DATABASE_URL']
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 #db = SQLAlchemy(app)
 #migrate = Migrate(app,db)
@@ -30,6 +31,7 @@ def pull():
 def dbtest():
     #m = os.environ['DATABASE_url']
     m = os.path.abspath(os.path.dirname(__file__))
+    m = m + " " +  dbase
     return m
 
 
