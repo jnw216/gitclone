@@ -18,12 +18,14 @@ elif sys.argv[1] == "push":
     g = requests.post("http://gitclone.herokuapp.com/push")
     result = g.text
 elif sys.argv[1] == "add":
+    # if argument is . do all files in current directory
+    # else if specific file anme, only upload that file
     print("adding file")
 elif sys.argv[1] == "commit":
     if sys.argv[2] != "-m":
         print("Command Invalid")
     m = sys.argv[3]
-    result = m
+    # write m to database associated with given files in previous command
 else:
     result = "Command Invalid"
     
