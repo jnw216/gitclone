@@ -1,6 +1,7 @@
 from flask import Flask
 from gitclone import app
-app = Flas(__name__)
+
+app = Flask(__name__)
 from views import *
 
 if __name__ == '__main__':
