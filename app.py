@@ -13,7 +13,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # PRINT ALL COMMITS  
-    return "GitClone!    <br>" 
+    return "GitClone! Work In Progress   <br>" 
 
 
 
