@@ -12,9 +12,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     # PRINT ALL COMMITS
-    #dburi = os.environ['DATABSE_URL']
+    dburi = os.environ['DATABSE_URL']
     #db2 = SQLALCHEMY_DATABSE_URI
-    return "GitClone!         adding Flask-SQLAlchemy  import ext       <br>" #+ dburi + "<br>" + db2
+    return "GitClone!               <br>" + dburi #+ "<br>" + db2
 
 @app.route('/push')
 def push():
