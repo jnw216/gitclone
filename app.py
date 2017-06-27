@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-
+from flask_migrate import Migrate, MigrateCommand
 
 app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABSE_URI'] = os.environ['DATABASE_URL']
@@ -14,7 +14,7 @@ def index():
     # PRINT ALL COMMITS
     dburi = os.environ['DATABSE_URL']
     #db2 = SQLALCHEMY_DATABSE_URI
-    return "GitClone!               <br>" + dburi #+ "<br>" + db2
+    return "GitClone!   Added dburi <br>" #+ dburi #+ "<br>" + db2
 
 @app.route('/push')
 def push():
