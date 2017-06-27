@@ -31,7 +31,7 @@ def pull():
 def dbtest():
     #m = os.environ['DATABASE_url']
     m = os.path.abspath(os.path.dirname(__file__))
-    m = m + " " +  dbase
+    m = m + " "  
     return m
 
 
