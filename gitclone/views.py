@@ -1,13 +1,11 @@
-
+from flask import render_template
 
 
 
 @app.route('/')
 def index():
-    # PRINT ALL COMMITS  
+    # PRINT ALL COMMITS  By DEFAULT?
     return "GitClone! work in progress   <br>" 
-
-
 
 @app.route('/push')
 def push():
