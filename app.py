@@ -17,7 +17,7 @@ def index():
 
 
 
-@app.route('/push')
+@app.route('/push', methods=["POST"])
 def push():
     return "pushing file"
 
