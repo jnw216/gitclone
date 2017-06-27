@@ -1,7 +1,7 @@
 import os 
 
 from flask import Flask
-from flask import SQLAlchemy
+from flask.ext.sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
@@ -14,7 +14,7 @@ def index():
     # PRINT ALL COMMITS
     #dburi = os.environ['DATABSE_URL']
     #db2 = SQLALCHEMY_DATABSE_URI
-    return "GitClone!         adding Flask-SQLAlchemy  IMPORTS       <br>" #+ dburi + "<br>" + db2
+    return "GitClone!         adding Flask-SQLAlchemy  import ext       <br>" #+ dburi + "<br>" + db2
 
 @app.route('/push')
 def push():
