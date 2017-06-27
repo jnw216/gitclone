@@ -1,5 +1,9 @@
 #!/usr/bin/python3.6
 
+# this is the command line utility used as a gitclone to interact with gitclone.herokuapp.com
+# made by Jonathan N. Winters for Advanced Python class at NYU SPS
+
+
 import requests, sys
 
 #args = argparse.parse_args()
