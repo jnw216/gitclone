@@ -25,10 +25,11 @@ def push():
 def pull():
     return "pulling file"
 
+'''
 @app.route('/dbtest')
 def dbtest():
     return os.environ['DATABASE_url']
-
+'''
 
 
 if __name__ == "__main__":
