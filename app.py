@@ -14,7 +14,7 @@ def index():
     # PRINT ALL COMMITS
     dburi = os.environ['DATABASE_URL']
     #db2 = SQLALCHEMY_DATABSE_URI
-    return "GitClone!   Added dburi <br>" + dburi #+ "<br>" + db2
+    return "GitClone!   Added dburi <br>"  #+ "<br>" + db2
 
 @app.route('/push')
 def push():
