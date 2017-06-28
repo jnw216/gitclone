@@ -1,4 +1,4 @@
-from app import db
+#from app import db
 from sqlalchemy.dialectics.postgresql import JSON
 
 class Commit(db.Model):
@@ -15,4 +15,3 @@ class Commit(db.Model):
         def __repr__(self):
             return '<id {}>'.format(self.id)
 
-            
