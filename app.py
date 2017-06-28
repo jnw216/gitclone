@@ -1,7 +1,7 @@
 import os 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from models import *
+from models import commits
 
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
