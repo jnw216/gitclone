@@ -1,12 +1,15 @@
 import os 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from models import commits
+
 
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
+
+from models import commits
+
 
 #migrate = Migrate(app,db)
 
