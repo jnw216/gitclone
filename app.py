@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
+appsettings = os.environ['APP_SETTINGS']
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
@@ -18,7 +19,7 @@ from models import commits
 @app.route('/')
 def index():
     # PRINT ALL COMMITS  
-    return "GitClone! Work In Progress app.config  <br>" 
+    return "GitClone! Work In Progress app.config  <br>" + appsettings + " ..."
 
 @app.route('/push', methods=["POST"])
 def push():

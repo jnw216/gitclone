@@ -23,7 +23,7 @@
 
 # Remote Migration
 * heroku config --app APPNAME
-* heroku config:set APP_SETTINGS=config.ProductionConfig --remote pro  ??
+* heroku config:set APP_SETTINGS=config.ProductionConfig --app APPNAME
 * heroku run python manage.py db init --app APPNAME
 * heroku run python manage.py db upgrmigrate ade --app APPNAME
 * heroku run python manage.py db upgrade --app APPNAME
