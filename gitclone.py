@@ -5,9 +5,9 @@
 
 
 import requests, sys
+import os
 
 #args = argparse.parse_args()
-
 
 if sys.argv[1] == "pull":
     # generates a list of the latest files
@@ -19,15 +19,21 @@ elif sys.argv[1] == "push":
     result = g.text
 elif sys.argv[1] == "add":
     # if argument is . do all files in current directory
-    # else if specific file anme, only upload that file
-    print("adding file")
-elif sys.argv[1] == "commit":
-    if sys.argv[2] != "-m":
-        print("Command Invalid")
-    m = sys.argv[3]
-    # write m to database associated with given files in previous command
+    if sys.argv[2] == ".":
+        filelist = os.listdir(os.curdir)
+        result = "Files found in . =" #+ str(os.listdir(os.curdir))  
+        paths = []      
+        for filename in filelist :
+            result = result + " " + filename
+            #result = result + " " + filename
+        for root, dirs, files in os.walk('./'):
+            for f in files:
+                s = root + f
+                if   (    (s.find("/ENV") < 0 ) and s.find("./.git")  < 0  ):
+                #if ("./ENV"  not in str(root + f))  ("./.git"  not in str(root + f)):
+                    print(root + f)
+
 else:
     result = "Command Invalid"
     
-
 print(result)
