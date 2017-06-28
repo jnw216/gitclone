@@ -32,7 +32,6 @@ elif sys.argv[1] == "add":
                 if   (    (s.find("/ENV") < 0 ) and s.find("./.git")  < 0  ):
                 #if ("./ENV"  not in str(root + f))  ("./.git"  not in str(root + f)):
                     print(root + f)
-
 else:
     result = "Command Invalid"
     
