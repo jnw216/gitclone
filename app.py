@@ -17,8 +17,6 @@ def index():
     # PRINT ALL COMMITS  
     return "GitClone! Work In Progress app.config  <br>" 
 
-
-
 @app.route('/push', methods=["POST"])
 def push():
     return "pushing file"

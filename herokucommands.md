@@ -21,6 +21,12 @@
 * git commit -am "uploading notes and CLI foundation"
 * git push heroku master
 
+# Remote Migration
+* heroku config --app APPNAME
+* heroku run python manage.py db init --app APPNAME
+* heroku run python manage.py db upgrmigrate ade --app APPNAME
+* heroku run python manage.py db upgrade --app APPNAME
+
 # Github Basics
 * git init
 * git add .
