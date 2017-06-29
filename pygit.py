@@ -10,12 +10,15 @@ import os
 #args = argparse.parse_args()
 
 if sys.argv[1] == "pull":
-    # generates a list of the files in the project
+    # generates a list of the files in the project by polling the DB
     g = requests.get("http://gitclone.herokuapp.com/pull")
     # for each file in list, pull it using .get to ./[file_name]
     result = g.text
 elif sys.argv[1] == "push":
+    #for each file that has changed in current folder
+    #upload as string using POST to be written to DB
     g = requests.post("http://gitclone.herokuapp.com/push")
+    #Display result from HTTP response
     result = g.text
 elif sys.argv[1] == "add":
     # if argument is . do all files in current directory

@@ -10,8 +10,6 @@
 # Log into Heroku
 * heroku login
 
-
-
 # Select the correct Heroku git repository
 * heroku git:remote -a gitclone
 
