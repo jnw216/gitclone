@@ -21,17 +21,17 @@ elif sys.argv[1] == "add":
     # if argument is . do all files in current directory
     if sys.argv[2] == ".":
         filelist = os.listdir(os.curdir)
-        result = "Files found in . =" #+ str(os.listdir(os.curdir))  
+        result = ""
         paths = []      
-        for filename in filelist :
-            result = result + " " + filename
-            #result = result + " " + filename
         for root, dirs, files in os.walk('./'):
             for f in files:
                 s = root + f
                 if   (    (s.find("/ENV") < 0 ) and s.find("./.git")  < 0  ):
                 #if ("./ENV"  not in str(root + f))  ("./.git"  not in str(root + f)):
-                    print(root + f)
+                    paths.append(root + f)
+        for  path in paths:
+            result = result + "\nuploading" + path
+        
 else:
     result = "Command Invalid"
     
