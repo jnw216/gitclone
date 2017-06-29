@@ -19,6 +19,9 @@ def index():
 
 @app.route('/push', methods=["POST"])
 def push():
+    '''
+    for each file write it to database as string    
+    '''
     return "pushing file"
 
 @app.route('/pull')
