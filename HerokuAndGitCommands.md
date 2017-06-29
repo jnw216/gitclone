@@ -38,3 +38,9 @@
 * git add .
 * git commit -m "First commit"
 * git push -u origin master
+## Remove from GitHub
+* git rm -r --cached FolderName
+* git commit -m "Removed folder from repo"
+* git push origin master
+
+
